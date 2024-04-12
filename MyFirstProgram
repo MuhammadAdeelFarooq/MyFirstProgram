@@ -1,0 +1,146 @@
+#Mr Halal Drinks
+
+#Variables
+price = 8
+menu = "Chai, Green Tea, Coffee, Latte, Expresso, Capuccino, Frappucino, Black Coffee, Hot Chocolate, Water, Milk, Orange Juice, Blackcurrant Juice, Iced Latte "
+time = 3
+pay_method = "Card or Cash"
+
+#Welcoming
+welcome = print("Hello, Welcome To Mr Halal Drinks!")
+
+#Asking Name
+name = input("What Is Your Name?\n")
+
+#If ,Else Statement
+if name == "Adeel" or name == "Rubab" or name == "Marium" or name == "Zainab":
+    #If He Is Evil
+    evil = input("Are You Evil?\n")
+    if evil == "Yes":
+        #Telling Rubab And Adeel And Marium And Zainab To Go Away 
+        deeds = input("How Many Good Deeds Have You Done Today?\n")
+        #Asking If They have Done Enought Good Deeds
+        if int(deeds) <2:
+            print("GET OUT!")
+            quit()
+        elif int(deeds) >1:
+            print("Wow, Thats Rare")         
+        
+    if evil == "No":
+        #Telling Adeel And Rubab And Marium And Zainab Thats Rare!
+        print("Wow, Thats Rare!! ")            
+else:
+    #Thanking For Coming
+    print("Hello " + name + ", Thanks For Coming!")
+
+    #Quantity Of Drinks
+    order = input(name + " , What Would You Like Today? Here Is Our Menu \n" + menu + "\n")
+    quantity = input("How Many Would You Like?\n")
+    
+    #Seting The Price
+    #Chai
+    if order == "Chai":
+        price = 6
+    #Green Tea
+    elif order == "Green Tea":
+        price = 7
+    #Coffee
+    elif order == "Coffee":
+        price = 8   
+    #latte
+    elif order == "Latte":
+        price = 4   
+    #Expresso
+    elif order == "Expresso":
+        price = 5
+    #Capuccino
+    elif order == "Capuccino":
+        price = 6
+    #Frappuccino
+    elif order == "Frappuccino":
+        price = 11  
+    #Black Coffee
+    elif order == "Black Coffee":
+        price = 5 
+    #Hot Chocolate
+    elif order == "Hot Chocolate":
+        price = 4
+    #Water
+    elif order == "Water":
+        price = 1
+    #Milk
+    elif order == "Milk":
+        price = 3
+    #Orange Juice
+    elif order == "Orange Juice":
+        price = 4
+    #Blackcurrant
+    elif order == "Blackcurrant Juice":
+        price = 5
+    #Iced latte
+    elif order == "Iced Latte":
+        price = 6
+    else:
+        print("Sorry, We Dont Have That Here")
+        price = 0
+    #Seting The Time
+    #Chai
+    if order == "Chai":
+        time = 10
+    #Green Tea
+    elif order == "Green Tea":
+        time = 6
+    #Coffee
+    elif order == "Coffee":
+        time = 7   
+    #latte
+    elif order == "Latte":
+        time = 5   
+    #Expresso
+    elif order == "Expresso":
+        time = 4
+    #Capuccino
+    elif order == "Capuccino":
+        time = 8
+    #Frappuccino
+    elif order == "Frappuccino":
+        time = 9  
+    #Black Coffee
+    elif order == "Black Coffee":
+        time = 8 
+    #Hot Choclate
+    elif order == "Hot Chocolate":
+        time = 5
+    #Water
+    elif order == "Water":
+        time = 1
+    #Milk
+    elif order == "Milk":
+        time = 1
+    #Orange Juice
+    elif order == "Orange Juice":
+        time = 2
+    #blackurrant juice
+    elif order == "Blackcurrant Juice":
+        time = 2
+    #iced latte
+    elif order == "Iced Latte":
+        time = 6
+       
+    #Price Of Drinks
+    total = price * int(quantity)
+    print("Your Total Is £" + str(total))
+    
+    #Order Time
+    how_long = time * int(quantity)
+    print("Your " + order + " Will Be Ready In " + str(how_long) + " Minutes.")
+    
+    #Payment Method
+    pay = input("How Will You Be Paying Today \n" + pay_method + "?\n")
+    if pay == "Card" or "Cash":
+        print("Thank You For Coming, I Hope I See You Soon! ")
+    else:
+        print("Sorry, We Dont Accept That Payment")
+        pay = input("Please Choose A Payment Option! \n" + pay_method + "\n")
+        if pay == "Card" or "Cash":
+            print("Thank You For Coming, I Hope I See You Soon! ")
